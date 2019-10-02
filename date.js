@@ -59,3 +59,15 @@ $.getMonthNameByNum = function (number) {
     const n = parseInt(number);
     return (n >= 1 && n <= 12) ? months[n] : "Undefined";
 }
+
+/**
+ * Convierte una fecha a texto.
+ * @param {string} date Ejem: 2019-09-11
+ * @returns {string} Ejem: 11/09/2019
+ * */
+$.convertDateToString = function (date) {
+    const arr = date.split("-");
+    if (arr.length === 3) {
+        return arr[2] + "/" + arr[1] + "/" + arr[0];
+    }
+}
